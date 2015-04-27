@@ -16,9 +16,9 @@ dbdata:
   image: mysql:5.7.7
   command: /bin/echo mysql Data container
 redis:
-  image: redis:3.0.0
+  image: redis
 cache:
-  image: memcached:1.4.23
+  image: memcached
 web:
   build: .
   command: bundle exec unicorn -E production -c config/unicorn.rb
