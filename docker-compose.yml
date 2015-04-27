@@ -24,7 +24,7 @@ web:
   command: bundle exec unicorn -E production -c config/unicorn.rb
   environment:
     SECRET_KEY_BASE: abcdefg
-    VIRTUAL_HOST: beer.docker
+    VIRTUAL_HOST: beer
     RAILS_ENV: production
   links:
     - db
