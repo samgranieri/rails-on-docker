@@ -1,11 +1,11 @@
-image: ruby
+image: ruby2.0.0
 services:
   - library/postgres:9.4.1
   - mysql
   - redis
 script:
   - mkdir -p /tmp/bundle
-  - chown -R ubuntu:ubuntu /tmp/bundle
+  - sudo chown -R ubuntu:ubuntu /tmp/bundle
   - bundle install --path /tmp/bundle
   - bundle exec rake db:create db:migrate test
 cache:
