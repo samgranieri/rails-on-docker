@@ -5,6 +5,7 @@ services:
   - redis
 script:
   - mkdir -p /tmp/bundle
+  - chown -R ubuntu:ubuntu /tmp/bundle
   - bundle install --path /tmp/bundle
   - bundle exec rake db:create db:migrate test
 cache:
